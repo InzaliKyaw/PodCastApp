@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Listener</string>
+    <string name="long_description">Women n Tech Podcast,hosted by Espree Devora</string>
+    <string name="play_back_desc">The #womenintech Show is a quite overwhelming worldwide</string>
+    <string name="long_desc_play_back">Having a personalized domain name will make you stand out of the crowd and let your audience and clients recognize your brand.
+    So,whether you decide on</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_search">How to Influence with Tactical Empathy</string>
+    <string name="category">Categories</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_text">It looks like you are enrolled in any podcasts,but it easy to get started.</string>
+    <string name="find_something">FIND SOMETHING NEW</string>
+    <string name="reload">RELOAD</string>
+    <string name="detail_heading">Designing for everyone, everywhere with Yosef Preferrable situation</string>
+    <string name="long_detail">Take your career to the next level by showing your prospective clients just how awesome you are by
+    making your personal website with a personalized domain name.Having a personalized domain name will make you stand out of the
+    crowd and let your audience and clients recognize your brand.So,whether you decide on yourname.me, or use a well-known alias\,like bingbong.me,
+    .ME domain is uniquely positioned to help you create a captivating online personal that\'s a direct reflection of
+    </string>
+
+    <!-- Bottom Navigation-->
+    <string name="navigation_home">Home</string>
+    <string name="navigation_search">Search</string>
+    <string name="navigation_yourshow">Your Show</string>
+    <string name="navigation_profile">Profile</string>
+</resources>
