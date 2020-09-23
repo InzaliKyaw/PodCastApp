@@ -1,26 +1,28 @@
 package com.example.listener.data.VO
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity
 data class PodcastVO(
 
+    @PrimaryKey
     @SerializedName("id")
-    val id:String,
+    val id: String,
 
     @SerializedName("title")
-    val title:String,
+    val title: String,
 
     @SerializedName("publisher")
-    val publisher:String,
+    val publisher: String,
 
     @SerializedName("image")
-    val image:String,
+    val image: String,
 
     @SerializedName("thumbnail")
-    val thumbnail:String,
+    val thumbnail: String,
 
     @SerializedName("listennotes_url")
-    val listennotesUrl:String
-    )
+    val listennotesUrl: String
+)

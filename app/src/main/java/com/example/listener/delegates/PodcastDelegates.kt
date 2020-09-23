@@ -1,5 +1,9 @@
 package com.example.listener.delegates
 
-interface PodcastDelegates{
-    fun onTapPodCast(id:Int)
+import com.example.listener.data.VO.ItemVO
+
+interface PodcastDelegates {
+
+    fun onTapPodCast(id: String)
+    fun onTapDownloadImage(itemVO: ItemVO)
 }

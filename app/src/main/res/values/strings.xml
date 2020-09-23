@@ -18,10 +18,13 @@
     crowd and let your audience and clients recognize your brand.So,whether you decide on yourname.me, or use a well-known alias\,like bingbong.me,
     .ME domain is uniquely positioned to help you create a captivating online personal that\'s a direct reflection of
     </string>
+    <string name="connection_lost">Connection is lost.</string>
+    <string name="reload_connection">Please reload your connection</string>
 
     <!-- Bottom Navigation-->
     <string name="navigation_home">Home</string>
     <string name="navigation_search">Search</string>
     <string name="navigation_yourshow">Your Show</string>
     <string name="navigation_profile">Profile</string>
+    <string name="podcast">Podcast</string>
 </resources>

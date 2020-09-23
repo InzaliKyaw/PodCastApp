@@ -1,25 +1,26 @@
 package com.example.listener.data.VO
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity
 data class ItemVO(
 
+    @PrimaryKey
     @SerializedName("id")
-    val id:Int,
+    val id: Int,
 
     @SerializedName("type")
-    val type:String,
+    val type: String,
 
     @SerializedName("notes")
-    val notes:String,
+    val notes: String,
 
     @SerializedName("added_at_ms")
-    val addedAtMs:Int,
+    val addedAtMs: Long,
 
     @SerializedName("data")
-    val data:DataVO
-
+    val data: DataVO?
 
 )

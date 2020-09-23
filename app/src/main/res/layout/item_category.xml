@@ -12,5 +12,15 @@
         android:scaleType="centerCrop">
 
     </ImageView>
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_gravity="center">
+
+    </TextView>
 
 </androidx.cardview.widget.CardView>

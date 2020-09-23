@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/home"
-        android:icon="@mipmap/home"
+        android:icon="@drawable/home_drawable"
         android:title="@string/navigation_home">
     </item>
 
     <item android:id="@+id/search"
-        android:icon="@mipmap/search"
+        android:icon="@drawable/search_drawable"
         android:title="@string/navigation_search">
 
     </item>
     <item android:id="@+id/yourShow"
         android:title="@string/navigation_yourshow"
-        android:icon="@mipmap/download_black">
+        android:icon="@drawable/download_drawable">
     </item>
     <item android:id="@+id/profile"
         android:title="@string/navigation_profile"
-        android:icon="@mipmap/profile">
+        android:icon="@drawable/profile_drawable">
 
     </item>
 </menu>

@@ -1,148 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.listener.view.vie.viewpod.MiniPlaybackViewpod android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     app:cardCornerRadius="30dp"
     android:layout_margin="10dp"
     android:backgroundTint="@color/purple"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:weightSum="5"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_weight="2"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:textSize="12dp"
-                        android:textColor="@color/fade_white"
-                        android:text="18:51">
-
-                    </TextView>
-                    <ProgressBar
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center_vertical|center"
-                        android:progress = "50"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal">
-                    </ProgressBar>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|center_horizontal"
-                        android:layout_weight="2"
-                        android:gravity="center_horizontal"
-                        android:textSize="12dp"
-                        android:textColor="@color/fade_white"
-                        android:text="18:51">
-
-                    </TextView>
-                </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:text="1x"
-                android:textColor="@color/white"
-                android:textSize="16dp">
+                android:orientation="horizontal">
 
-            </TextView>
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/skipMiniPlayback"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="40dp"
+                <TextView
+                    android:id="@id/exo_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="@dimen/margin_medium_3"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="#FFBEBEBE"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.exoplayer2.ui.DefaultTimeBar
+                    android:id="@id/exo_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@id/exo_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginRight="@dimen/margin_medium_3"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="#FFBEBEBE"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:text="15"
-                android:textSize="10dp"
-                android:textColor="@color/white"
-                app:strokeColor="@color/white"
-                android:insetLeft="0dp"
-                android:insetTop="0dp"
-                android:insetRight="0dp"
-                android:insetBottom="0dp"
                 android:gravity="center"
-                app:iconGravity="start"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Podcast.Button.Circle"
-                >
+                android:orientation="horizontal">
 
-            </com.google.android.material.button.MaterialButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:gravity="center"
+                    android:text="1x"
+                    android:textColor="@android:color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/playMiniPlayback"
-                style="@style/Widget.MaterialComponents.Button.Icon"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="@color/fade_purple"
-                android:elevation="5dp"
-                android:insetLeft="0dp"
-                android:insetTop="0dp"
-                android:insetRight="0dp"
-                android:insetBottom="0dp"
-                app:icon="@drawable/ic_play"
-                app:iconGravity="end"
-                app:iconSize="18dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Podcast.Button.Circle">
+                <ImageButton
+                    android:id="@id/exo_rew"
+                    style="@style/CustomExoMediaButton.Rewind"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_medium_2" />
 
-            </com.google.android.material.button.MaterialButton>
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/reverseMiniPlayback"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="10dp"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:text="30"
-                android:textSize="10dp"
-                android:textColor="@color/white"
-                app:strokeColor="@color/white"
-                android:insetLeft="0dp"
-                android:insetTop="0dp"
-                android:insetRight="0dp"
-                android:insetBottom="0dp"
-                android:gravity="center"
-                app:iconGravity="start"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Podcast.Button.Circle"
-                >
+                <ImageButton
+                    android:id="@id/exo_play"
+                    style="@style/CustomExoMediaButton.Play"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical" />
 
-            </com.google.android.material.button.MaterialButton>
+                <ImageButton
+                    android:id="@id/exo_pause"
+                    style="@style/CustomExoMediaButton.Pause"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical" />
+
+                <ImageButton
+                    android:id="@id/exo_ffwd"
+                    style="@style/CustomExoMediaButton.Ffwd"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_medium_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:gravity="center"
+                    android:text="Zz"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
-
 
 </androidx.cardview.widget.CardView>
-</com.example.listener.view.vie.viewpod.MiniPlaybackViewpod>
+</LinearLayout>

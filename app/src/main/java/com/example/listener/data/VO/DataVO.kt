@@ -1,35 +1,56 @@
 package com.example.listener.data.VO
 
 import android.icu.text.CaseMap
+import androidx.room.Embedded
 import androidx.room.Entity
+import androidx.room.PrimaryKey
+import androidx.room.TypeConverter
+import com.example.listener.typeconverter.PodcastTypeConverter
+import com.google.gson.annotations.SerializedName
 
 @Entity
 data class DataVO(
-    val id:String,
 
+    @PrimaryKey
+    @SerializedName("id")
+    val id: String,
+
+    @SerializedName("title")
     val title: String,
 
-    val description:String,
+    @SerializedName("description")
+    val description: String,
 
-    val pubDateMS:Int,
+    @SerializedName("pub_date_ms")
+    val pubDateMS: Long,
 
-    val audio:String,
+    @SerializedName("audio")
+    val audio: String,
 
-    val audioLengthSec:Int,
+    @SerializedName("audio_length_sec")
+    val audioLengthSec: Int,
 
-    val listenNotesUrl:String,
+    @SerializedName("listennotes_url")
+    val listenNotesUrl: String,
 
-    val image:String,
+    @SerializedName("image")
+    val image: String,
 
-    val thumbnail:String,
+    @SerializedName("thumbnail")
+    val thumbnail: String,
 
-    val maybeAudioInvalid:Boolean,
+    @SerializedName("maybe_audio_invalid")
+    val maybeAudioInvalid: Boolean,
 
-    val listenNotesEditUrl:String,
+    @SerializedName("listennotes_edit_url")
+    val listenNotesEditUrl: String,
 
-    val explicitContent:Boolean,
+    @SerializedName("explicit_content")
+    val explicitContent: Boolean,
 
-    val link:String,
+    @SerializedName("link")
+    val link: String,
 
-    val podcast:PodcastVO
+    @SerializedName("podcast")
+    val podcast: PodcastVO
 )
