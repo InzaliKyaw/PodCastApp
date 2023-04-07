@@ -15,6 +15,7 @@
             android:id="@+id/yourShowImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             android:src="@drawable/podcast_graph">
 
         </ImageView>

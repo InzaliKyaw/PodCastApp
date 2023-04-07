@@ -24,9 +24,9 @@ import com.example.listener.mvp.presenters.MainPresenterImpl
 import com.example.listener.mvp.view.MainView
 import com.example.listener.network.response.GetRandomPodcastResponse
 import com.example.listener.util.PermissionUtil
+import kotlinx.android.synthetic.main.activity_podcast_detail.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.viewpod_play_back.*
-import kotlinx.android.synthetic.main.fragment_home.playerControl as playerControl1
 
 
 @Suppress("DEPRECATION")
@@ -72,6 +72,7 @@ class HomeFragment : BaseFragment(), MainView {
         upnextAdapter = UpNextAdapter(mPresenter)
         setUpRecyclerView(upnextAdapter)
 
+        //Ask permisson for read and write
         permissionUtil = PermissionUtil(this.requireActivity())
         if (!permissionUtil.checkPermissionForReadExternalStorage() ||
             !permissionUtil.checkPermissionForWriteExternalStorage()
@@ -87,6 +88,7 @@ class HomeFragment : BaseFragment(), MainView {
 
     }
 
+    //Download Complete
     private var onComplete: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if (intent?.action == DownloadManager.ACTION_DOWNLOAD_COMPLETE) {
@@ -99,23 +101,23 @@ class HomeFragment : BaseFragment(), MainView {
 
     override fun onStart() {
         super.onStart()
-        mPresenter.getPlayer().getPlayerImpl(this.requireContext())
+        //mPresenter.getPlayer().getPlayerImpl(this.requireContext())
     }
 
     override fun onResume() {
         super.onResume()
         hideSystemUi()
-        mPresenter.getPlayer().getPlayerImpl(this.requireContext())
+       // mPresenter.getPlayer().getPlayerImpl(this.requireContext())
     }
 
     override fun onStop() {
         super.onStop()
-        mPresenter.releasePlayer()
+       // mPresenter.releasePlayer()
     }
 
     override fun onPause() {
         super.onPause()
-        mPresenter.releasePlayer()
+        //mPresenter.releasePlayer()
     }
 
     override fun onDestroy() {
@@ -144,7 +146,8 @@ class HomeFragment : BaseFragment(), MainView {
         randomDesc.text = Html.fromHtml(randomVO.description)
 
         val url = randomVO.audio
-        playerControl1.player = mPresenter.getPlayer().getPlayerImpl(this.requireContext())
+
+        playerControlHome.player = mPresenter.getPlayer().getPlayerImpl(this.requireContext())
 
         exo_play.setOnClickListener {
             mPresenter.play(url)
@@ -191,7 +194,7 @@ class HomeFragment : BaseFragment(), MainView {
 
     @SuppressLint("InlinedApi")
     private fun hideSystemUi() {
-        playerControl1.systemUiVisibility = (View.SYSTEM_UI_FLAG_LOW_PROFILE
+        playerControlHome.systemUiVisibility = (View.SYSTEM_UI_FLAG_LOW_PROFILE
                 or View.SYSTEM_UI_FLAG_FULLSCREEN
                 or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
